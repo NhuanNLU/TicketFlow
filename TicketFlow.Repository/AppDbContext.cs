@@ -26,4 +26,8 @@ public class AppDbContext: DbContext
     public DbSet<BookingCampaign> BookingCampaigns { get; set; }
     public DbSet<Campaign> Campaigns { get; set; }
     public DbSet<CampaignEvent> CampaignEvents { get; set; }
+    public DbSet<Zone>  Zones { get; set; }
+    public DbSet<Seat> Seats { get; set; }
+    public DbSet<EventSeat> EventSeats { get; set; }
+    public DbSet<EventZone> EventZones { get; set; }
 }

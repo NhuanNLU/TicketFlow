@@ -18,5 +18,6 @@ public class Event: EntityAuditSoftDeleteBase<Guid>
     public DateTimeOffset? SaleEndDate { get; set; }       // 👈 thêm: kết thúc bán
     public int MaxTicketsPerUser { get; set; } = 4;        // 👈 thêm: tối đa vé/user
     public ICollection<IdolEvent> IdolEvents { get; set; } =  new List<IdolEvent>();
-    
+    public ICollection<EventZone> EventZones { get; set; } = new List<EventZone>();
+    public ICollection<EventSeat>  EventSeats { get; set; } = new List<EventSeat>();
 }

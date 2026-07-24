@@ -10,6 +10,6 @@ public class Organizer: EntityAuditSoftDeleteBase<Guid>
     public required string OrganizerEmail { get; set; }
     public required string OrganizerPhone { get; set; }
     public ICollection<Staff> Staffs { get; set; } = new List<Staff>();
-    //List BusinessLicense
+    public ICollection<Document> Documents { get; set; } = new List<Document>();
     public ICollection<Event> Events { get; set; } = new List<Event>();
 }
