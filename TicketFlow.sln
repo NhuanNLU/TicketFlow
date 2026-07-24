@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketFlow.API", "TicketFlow.API\TicketFlow.API.csproj", "{46997DB5-B58D-45CC-9A26-D02B992353B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketFlow.Repository", "TicketFlow.Repository\TicketFlow.Repository.csproj", "{AB07B59D-AB8A-4837-ACA1-0F6B0DD387BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketFlow.Service", "TicketFlow.Service\TicketFlow.Service.csproj", "{415C09AB-A2DF-4009-910B-EF73F177534B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46997DB5-B58D-45CC-9A26-D02B992353B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46997DB5-B58D-45CC-9A26-D02B992353B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46997DB5-B58D-45CC-9A26-D02B992353B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46997DB5-B58D-45CC-9A26-D02B992353B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB07B59D-AB8A-4837-ACA1-0F6B0DD387BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB07B59D-AB8A-4837-ACA1-0F6B0DD387BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB07B59D-AB8A-4837-ACA1-0F6B0DD387BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB07B59D-AB8A-4837-ACA1-0F6B0DD387BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{415C09AB-A2DF-4009-910B-EF73F177534B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415C09AB-A2DF-4009-910B-EF73F177534B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415C09AB-A2DF-4009-910B-EF73F177534B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415C09AB-A2DF-4009-910B-EF73F177534B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
