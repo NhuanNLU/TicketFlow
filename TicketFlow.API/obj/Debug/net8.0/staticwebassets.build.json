@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "utAQ6gpTksYQr63gaNUdhh3RALfWCvbbfccYSZeVsKU=",
+  "Source": "TicketFlow.API",
+  "BasePath": "_content/TicketFlow.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

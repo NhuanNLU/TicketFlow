@@ -1,0 +1,16 @@
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\bin\Debug\net8.0\TicketFlow.Service.deps.json
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\bin\Debug\net8.0\TicketFlow.Service.dll
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\bin\Debug\net8.0\TicketFlow.Service.pdb
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\bin\Debug\net8.0\TicketFlow.Repository.dll
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\bin\Debug\net8.0\TicketFlow.Repository.pdb
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\obj\Debug\net8.0\TicketFlow.Service.csproj.AssemblyReference.cache
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\obj\Debug\net8.0\TicketFlow.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\obj\Debug\net8.0\TicketFlow.Service.AssemblyInfoInputs.cache
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\obj\Debug\net8.0\TicketFlow.Service.AssemblyInfo.cs
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\obj\Debug\net8.0\TicketFlow.Service.csproj.CoreCompileInputs.cache
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\obj\Debug\net8.0\TicketFlow.Service.sourcelink.json
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\obj\Debug\net8.0\TicketFl.45148578.Up2Date
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\obj\Debug\net8.0\TicketFlow.Service.dll
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\obj\Debug\net8.0\refint\TicketFlow.Service.dll
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\obj\Debug\net8.0\TicketFlow.Service.pdb
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.Service\obj\Debug\net8.0\ref\TicketFlow.Service.dll
