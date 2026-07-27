@@ -14,8 +14,7 @@ public static class ApiResponseFactory
 {
     public static ApiResponse SuccessResponse(object? data, string message = "Request processed successfully",
         string? traceId = null)
-    {
-        return new ApiResponse
+        =>  new ApiResponse
         {
             Success = true,
             Message = message,
@@ -23,11 +22,10 @@ public static class ApiResponseFactory
             TraceId = traceId,
             TimestampUtc = DateTime.UtcNow
         };
-    }
+    
 
     public static ApiResponse ErrorResponse(string message, object? errors = null, string? traceId = null)
-    {
-        return new ApiResponse
+        => new ApiResponse
         {
             Success = false,
             Message = message,
@@ -35,5 +33,4 @@ public static class ApiResponseFactory
             TraceId = traceId,
             TimestampUtc = DateTime.UtcNow
         };
-    }
 }
