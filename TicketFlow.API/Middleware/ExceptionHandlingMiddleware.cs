@@ -1,4 +1,5 @@
-﻿using TicketFlow.Service.Models;
+﻿using FluentValidation;
+using TicketFlow.Service.Models;
 namespace TicketFlow.API.Middleware;
 
 public class ExceptionHandlingMiddleware: IMiddleware
@@ -38,7 +39,12 @@ public class ExceptionHandlingMiddleware: IMiddleware
         context.Response.ContentType = "application/json";
         var response = ApiResponseFactory.ErrorResponse(
             message: ResolveClientMessage(e, statusCode),
-            errors: _environment.IsDevelopment() ? new { detail = e.Message } : null,
+            errors: _environment.IsDevelopment() switch
+            {
+                true when e is ValidationException ve => ve.Errors.Select(x => new { x.PropertyName, x.ErrorMessage }),
+                true => new { detail = e.Message },
+                _ => null
+            },
             traceId: context.TraceIdentifier);
         await context.Response.WriteAsJsonAsync(response);
     }
@@ -46,6 +52,7 @@ public class ExceptionHandlingMiddleware: IMiddleware
     private static int GetStatusCode(Exception e) =>
         e switch
         {
+            ValidationException => StatusCodes.Status400BadRequest,
             ArgumentException or InvalidOperationException => StatusCodes.Status400BadRequest,
             UnauthorizedAccessException => StatusCodes.Status401Unauthorized,
             KeyNotFoundException => StatusCodes.Status404NotFound,
