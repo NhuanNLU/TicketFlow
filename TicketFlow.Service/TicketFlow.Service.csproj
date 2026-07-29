@@ -11,6 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="UserCase\V1\Events\" />
       <Folder Include="UserCase\V1\Queries\" />
       <Folder Include="UserCase\V2\" />
     </ItemGroup>
