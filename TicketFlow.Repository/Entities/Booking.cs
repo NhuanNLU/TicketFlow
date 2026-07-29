@@ -1,4 +1,5 @@
 ﻿using TicketFlow.Repository.Abstractions;
+using TicketFlow.Repository.Enum.Booking;
 
 namespace TicketFlow.Repository.Entities;
 
@@ -9,7 +10,7 @@ public class Booking: EntityAuditBase<Guid>
      public Event Event { get; set; }
      public Guid EventId { get; set; }
      public decimal FinalPrice { get; set; }
-     public int Status { get; set; }
+     public StatusBookingEnum Status { get; set; }
      public string? Note { get; set; }
      public ICollection<BookingDetail> BookingDetails { get; set; } = new List<BookingDetail>();
      public ICollection<BookingCampaign>  BookingCampaigns { get; set; } = new List<BookingCampaign>();

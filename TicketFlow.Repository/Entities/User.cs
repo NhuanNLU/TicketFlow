@@ -1,4 +1,6 @@
 ﻿using TicketFlow.Repository.Abstractions;
+using TicketFlow.Repository.Enum.Common;
+using TicketFlow.Repository.Enum.User;
 
 namespace TicketFlow.Repository.Entities;
 
@@ -8,13 +10,13 @@ public class User: EntityAuditSoftDeleteBase<Guid>
     public required string Email { get; set; }
     public required string Password { get; set; }
     public string? Avatar { get; set; }
-    public int? Gender { get; set; }
+    public GenderEnum? Gender { get; set; }
     public string? PhoneNumber { get; set; }
     public string? Address { get; set; }
     public string? Bio { get; set; }
     public DateTimeOffset? DateOfBirth { get; set; }
-    public int Role  { get; set; }
-    public int Status  { get; set; }
+    public RoleEnum Role  { get; set; }
+    public StatusUserEnum Status  { get; set; }
     public bool EmailConfirmed  { get; set; }
     public DateTimeOffset? LastLoginAt   { get; set; }
     public DateTimeOffset? RefreshTokenExpiryTime  { get; set; }

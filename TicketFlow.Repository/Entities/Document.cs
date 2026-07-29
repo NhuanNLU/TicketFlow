@@ -1,4 +1,5 @@
 ﻿using TicketFlow.Repository.Abstractions;
+using TicketFlow.Repository.Enum.Document;
 
 namespace TicketFlow.Repository.Entities;
 
@@ -11,7 +12,7 @@ public class Document: EntityAuditSoftDeleteBase<Guid>
     public required string FileType { get; set; }       // Định dạng file (VD: "pdf", "jpg", "png")
     public long FileSize { get; set; }                  // Dung lượng file (bytes) — để kiểm soát kích thước upload
 
-    public int DocumentType { get; set; }               // Loại giấy tờ (BusinessLicense, TaxCertificate, IdentityCard, EventPermit,...)
+    public DocumentTypeEnum DocumentType { get; set; }               // Loại giấy tờ (BusinessLicense, TaxCertificate, IdentityCard, EventPermit,...)
 
     public bool IsVerified { get; set; }                // Admin đã xác thực giấy tờ này chưa?
     public DateTimeOffset? VerifiedAt { get; set; }     // Thời điểm admin xác thực

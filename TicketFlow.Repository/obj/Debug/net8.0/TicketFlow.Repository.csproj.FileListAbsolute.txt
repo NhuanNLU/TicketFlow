@@ -11,5 +11,3 @@ D:\MyProject\Dotnet\TicketFlow\TicketFlow.Repository\obj\Debug\net8.0\TicketFlow
 D:\MyProject\Dotnet\TicketFlow\TicketFlow.Repository\obj\Debug\net8.0\refint\TicketFlow.Repository.dll
 D:\MyProject\Dotnet\TicketFlow\TicketFlow.Repository\obj\Debug\net8.0\TicketFlow.Repository.pdb
 D:\MyProject\Dotnet\TicketFlow\TicketFlow.Repository\obj\Debug\net8.0\ref\TicketFlow.Repository.dll
-D:\MyProject\Dotnet\TicketFlow\TicketFlow.Repository\bin\Debug\net8.0\TicketFlow.Repository.runtimeconfig.json
-D:\MyProject\Dotnet\TicketFlow\TicketFlow.Repository\obj\Debug\net8.0\TicketFlow.Repository.genruntimeconfig.cache

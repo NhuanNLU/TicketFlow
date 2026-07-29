@@ -12,7 +12,7 @@ using TicketFlow.Repository;
 namespace TicketFlow.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260726143618_Initial")]
+    [Migration("20260729163253_Initial")]
     partial class Initial
     {
         /// <inheritdoc />

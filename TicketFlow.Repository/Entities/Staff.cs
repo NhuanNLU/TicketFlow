@@ -1,4 +1,5 @@
 ﻿using TicketFlow.Repository.Abstractions;
+using TicketFlow.Repository.Enum.Staff;
 
 namespace TicketFlow.Repository.Entities;
 
@@ -13,5 +14,5 @@ public class Staff: EntityAuditSoftDeleteBase<Guid>
     public required string Phone { get; set; }
     public required string Avatar { get; set; }
     public DateTimeOffset? LastLoginAt { get; set; }
-    public int Status  { get; set; }
+    public StaffStatusEnum Status  { get; set; }
 }

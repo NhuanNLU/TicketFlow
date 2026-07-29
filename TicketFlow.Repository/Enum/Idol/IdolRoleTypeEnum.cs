@@ -1,4 +1,4 @@
-﻿namespace TicketFlow.Repository.Enum;
+﻿namespace TicketFlow.Repository.Enum.Idol;
 
 public enum IdolRoleTypeEnum
 {

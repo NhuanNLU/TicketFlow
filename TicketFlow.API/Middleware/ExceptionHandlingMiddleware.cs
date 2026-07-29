@@ -39,12 +39,7 @@ public class ExceptionHandlingMiddleware: IMiddleware
         context.Response.ContentType = "application/json";
         var response = ApiResponseFactory.ErrorResponse(
             message: ResolveClientMessage(e, statusCode),
-            errors: _environment.IsDevelopment() switch
-            {
-                true when e is ValidationException ve => ve.Errors.Select(x => new { x.PropertyName, x.ErrorMessage }),
-                true => new { detail = e.Message },
-                _ => null
-            },
+            errors: _environment.IsDevelopment() ? new {detail = e.Message}: null,
             traceId: context.TraceIdentifier);
         await context.Response.WriteAsJsonAsync(response);
     }
