@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using FluentValidation;
+﻿using FluentValidation;
 using MediatR;
 
 namespace TicketFlow.Service.Behaviors;

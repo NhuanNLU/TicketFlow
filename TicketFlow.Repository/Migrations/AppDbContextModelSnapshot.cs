@@ -49,10 +49,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("character varying(100)");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("NewValues")
@@ -95,10 +94,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("numeric(18,2)");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Note")
@@ -208,10 +206,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("numeric(18,2)");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
@@ -295,10 +292,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid>("UserId")
@@ -351,10 +347,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid>("OrganizerId")
@@ -412,10 +407,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
@@ -470,10 +464,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid>("SeatId")
@@ -511,10 +504,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<decimal>("Price")
@@ -568,10 +560,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Nationality")
@@ -645,10 +636,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Title")
@@ -686,10 +676,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("OrganizerEmail")
@@ -782,10 +771,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid>("TargetId")
@@ -866,10 +854,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("Number")
@@ -928,10 +915,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<Guid>("OrganizerId")
@@ -1008,10 +994,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Password")
@@ -1076,10 +1061,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("character varying(500)");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
@@ -1119,10 +1103,9 @@ namespace TicketFlow.Repository.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("ModifiedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTimeOffset>("ModifiedDate")
+                    b.Property<DateTimeOffset?>("ModifiedDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")

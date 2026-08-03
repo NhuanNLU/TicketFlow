@@ -1,13 +1,14 @@
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using TicketFlow.API.Extensions;
 using TicketFlow.API.Middleware;
 using TicketFlow.Repository;
 using TicketFlow.Repository.Abstractions;
 using TicketFlow.Service.Behaviors;
 using TicketFlow.Service.Mapper;
-using TicketFlow.Service.UserCase.V1.Commands.Identity;
-
+using TicketFlow.Service.UserCase.V1.Commands.Identity.Register;
+using JwtTokenService = TicketFlow.Service.JwtService;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,6 +16,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+builder.Services.AddJwtAuthentication(builder.Configuration);
+builder.Services.AddTransient<JwtTokenService.IJwtTokenService, JwtTokenService.JwtTokenService>();
 builder.Services.AddTransient<ExceptionHandlingMiddleware>();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));

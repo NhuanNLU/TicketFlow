@@ -1,6 +1,7 @@
 ﻿using MediatR;
+using TicketFlow.Repository.Abstractions.Shared;
 
 namespace TicketFlow.Repository.Abstractions.Message;
 
-public interface ICommand: IRequest { }
-public interface ICommand<out TResponse>: IRequest<TResponse>{}
+public interface ICommand: IRequest<Result> { }
+public interface ICommand<TResponse>: IRequest<Result<TResponse>> {}

@@ -1,5 +1,7 @@
 ﻿using MediatR;
+using TicketFlow.Repository.Abstractions.Shared;
 
 namespace TicketFlow.Repository.Abstractions.Message;
 
-public interface IQueryHandler<in TQuery, TResponse>: IRequestHandler<TQuery, TResponse> where TQuery: IQuery<TResponse> { }
+public interface IQueryHandler<TQuery, TResponse>: IRequestHandler<TQuery, Result<TResponse>> 
+    where TQuery: IQuery<TResponse> { }

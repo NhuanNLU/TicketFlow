@@ -1,4 +1,4 @@
-﻿namespace TicketFlow.Service.Models;
+namespace TicketFlow.Service.Models;
 
 public class ApiResponse
 {
@@ -22,8 +22,6 @@ public static class ApiResponseFactory
             TraceId = traceId,
             TimestampUtc = DateTime.UtcNow
         };
-    
-
     public static ApiResponse ErrorResponse(string message, object? errors = null, string? traceId = null)
         => new ApiResponse
         {

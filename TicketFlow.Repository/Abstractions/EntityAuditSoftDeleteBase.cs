@@ -6,8 +6,8 @@ public abstract class EntityAuditSoftDeleteBase<TKey>: IEntityAuditBase<TKey>, I
 {
     public TKey Id { get; set; }
     public DateTimeOffset CreatedDate { get; set; }
-    public DateTimeOffset ModifiedDate { get; set; }
+    public DateTimeOffset? ModifiedDate { get; set; }
     public string CreatedBy { get; set; }
-    public string ModifiedBy { get; set; }
+    public string? ModifiedBy { get; set; }
     public bool IsDeleted { get; set; }
 }
