@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using TicketFlow.Repository;
 using TicketFlow.Repository.Abstractions.Message;
 using TicketFlow.Repository.Abstractions.Shared;
+using TicketFlow.Service.Caching;
 using TicketFlow.Service.JwtService;
 
 namespace TicketFlow.Service.UserCase.V1.Queries.Identity.Login;
@@ -12,10 +13,12 @@ public class LoginQueryHandler: ICommandHandler<LoginRequestQuery>
 {
     private readonly IJwtTokenService _jwtTokenService;
     private readonly AppDbContext _dbContext;
-    public LoginQueryHandler(IJwtTokenService jwtTokenService,  AppDbContext dbContext)
+    private readonly ICacheService  _cacheService;
+    public LoginQueryHandler(IJwtTokenService jwtTokenService,  AppDbContext dbContext, ICacheService cacheService)
     {
         _jwtTokenService = jwtTokenService;
         _dbContext = dbContext;
+        _cacheService = cacheService;
     }
 
     public async Task<Result> Handle(LoginRequestQuery request, CancellationToken cancellationToken)
@@ -39,6 +42,7 @@ public class LoginQueryHandler: ICommandHandler<LoginRequestQuery>
             RefreshToken = refreshToken,
             RefreshTokenExpiryTime =  DateTime.Now.AddMinutes(5)
         };
+        await _cacheService.SetAsync(user.Email, response, cancellationToken);
         return Result.Success(response);
     }
 }

@@ -139,3 +139,7 @@ D:\MyProject\Dotnet\TicketFlow\TicketFlow.API\bin\Debug\net8.0\System.IdentityMo
 D:\MyProject\Dotnet\TicketFlow\TicketFlow.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
 D:\MyProject\Dotnet\TicketFlow\TicketFlow.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\MyProject\Dotnet\TicketFlow\TicketFlow.API\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.API\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.API\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.API\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.API\bin\Debug\net8.0\StackExchange.Redis.dll

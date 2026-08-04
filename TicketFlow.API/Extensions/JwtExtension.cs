@@ -45,5 +45,6 @@ public static class JwtExtension
                             }
                      };
               });
+              services.AddAuthorization();
        }
 }

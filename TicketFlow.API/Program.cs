@@ -6,6 +6,7 @@ using TicketFlow.API.Middleware;
 using TicketFlow.Repository;
 using TicketFlow.Repository.Abstractions;
 using TicketFlow.Service.Behaviors;
+using TicketFlow.Service.Caching;
 using TicketFlow.Service.Mapper;
 using TicketFlow.Service.UserCase.V1.Commands.Identity.Register;
 using JwtTokenService = TicketFlow.Service.JwtService;
@@ -17,7 +18,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddJwtAuthentication(builder.Configuration);
+builder.Services.AddRedisService(builder.Configuration);
 builder.Services.AddTransient<JwtTokenService.IJwtTokenService, JwtTokenService.JwtTokenService>();
+builder.Services.AddTransient<ICacheService, CacheService>();
 builder.Services.AddTransient<ExceptionHandlingMiddleware>();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
