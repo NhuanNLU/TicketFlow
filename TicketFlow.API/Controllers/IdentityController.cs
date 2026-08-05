@@ -1,7 +1,6 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
-using TicketFlow.Service.UserCase.V1.Commands.Identity.Register;
-using TicketFlow.Service.UserCase.V1.Queries.Identity.Login;
+﻿using Microsoft.AspNetCore.Mvc;
+using TicketFlow.Service.Models;
+using TicketFlow.Service.UserCase.V1.Identity;
 
 namespace TicketFlow.API.Controllers;
 [ApiController]
@@ -9,21 +8,21 @@ namespace TicketFlow.API.Controllers;
 //[Authorize]
 public class IdentityController: ControllerBase
 {
-    private readonly ISender _sender;
-    public IdentityController(ISender sender)
+    private readonly IService _service;
+    public IdentityController(IService service)
     {
-        _sender = sender;
+        _service = service;
     }
     [HttpPost("register")]
-    public async Task<ActionResult> Register(RegisterCommand request)
+    public async Task<IActionResult> Register(Request.RegisterRequest request, CancellationToken cancellationToken = default)
     {
-        var result = await _sender.Send(request);
-        return Ok(result);
+        await _service.Register(request, cancellationToken);
+        return Ok(ApiResponseFactory.SuccessResponse("Register Success", null, HttpContext.TraceIdentifier));
     }
     [HttpPost("login")]
-    public async Task<ActionResult> Login(LoginRequestQuery request)
+    public async Task<IActionResult> Login(Request.LoginRequest request, CancellationToken cancellationToken = default)
     {
-        var result = await _sender.Send(request);
-        return Ok(result);
+        var result = await _service.Login(request, cancellationToken);
+        return Ok(ApiResponseFactory.SuccessResponse("Login Success", result, HttpContext.TraceIdentifier));
     }
 }

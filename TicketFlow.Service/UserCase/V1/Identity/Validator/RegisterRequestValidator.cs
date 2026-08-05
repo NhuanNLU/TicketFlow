@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
 
-namespace TicketFlow.Service.UserCase.V1.Commands.Identity.Register;
+namespace TicketFlow.Service.UserCase.V1.Identity.Validator;
 
-public class RegisterCommandValidator: AbstractValidator<RegisterCommand>
+public class RegisterRequestValidator: AbstractValidator<Request.RegisterRequest>
 {
-    public RegisterCommandValidator()
+    public RegisterRequestValidator()
     {
         RuleFor(x => x.Username).NotEmpty().MaximumLength(50);
         RuleFor(x => x.Email).NotEmpty().EmailAddress();

@@ -12,7 +12,7 @@ public class ApiResponse
 
 public static class ApiResponseFactory
 {
-    public static ApiResponse SuccessResponse(object? data, string message = "Request processed successfully",
+    public static ApiResponse SuccessResponse(string message, object? data,
         string? traceId = null)
         =>  new ApiResponse
         {

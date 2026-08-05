@@ -7,6 +7,8 @@ namespace TicketFlow.API.Extensions;
 
 public static class JwtExtension
 {
+       public const string CustomerPolicy = "CustomerPolicy";
+
        public static void AddJwtAuthentication(this IServiceCollection services, IConfiguration configuration)
        {
               services.AddAuthentication(options =>
@@ -45,6 +47,12 @@ public static class JwtExtension
                             }
                      };
               });
-              services.AddAuthorization();
+              services.AddAuthorization(options =>
+              {
+                     options.AddPolicy(CustomerPolicy, policy =>
+                     {
+                            policy.RequireRole("Customer");
+                     });
+              });
        }
 }

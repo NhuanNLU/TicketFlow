@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "TicketFlow.API/1.0.0": {
         "dependencies": {
+          "FluentValidation.DependencyInjectionExtensions": "12.1.1",
           "MediatR": "14.2.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.29",
           "Microsoft.AspNetCore.OpenApi": "8.0.25",
@@ -899,7 +900,6 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "BCrypt.Net-Next": "4.2.0",
           "FluentValidation": "12.1.1",
-          "FluentValidation.DependencyInjectionExtensions": "12.1.1",
           "MailKit": "4.17.0",
           "Microsoft.Extensions.Configuration.Binder": "10.0.10",
           "Newtonsoft.Json": "13.0.4",
