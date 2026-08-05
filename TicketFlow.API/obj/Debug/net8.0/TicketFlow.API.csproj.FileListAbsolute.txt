@@ -143,3 +143,4 @@ D:\MyProject\Dotnet\TicketFlow\TicketFlow.API\bin\Debug\net8.0\Microsoft.Extensi
 D:\MyProject\Dotnet\TicketFlow\TicketFlow.API\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\MyProject\Dotnet\TicketFlow\TicketFlow.API\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
 D:\MyProject\Dotnet\TicketFlow\TicketFlow.API\bin\Debug\net8.0\StackExchange.Redis.dll
+D:\MyProject\Dotnet\TicketFlow\TicketFlow.API\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
