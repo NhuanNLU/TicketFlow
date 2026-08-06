@@ -5,6 +5,7 @@ using TicketFlow.API.Middleware;
 using TicketFlow.Repository;
 using TicketFlow.Repository.Abstractions;
 using TicketFlow.Service.Caching;
+using TicketFlow.Service.Dapper;
 using TicketFlow.Service.Mapper;
 using JwtTokenService = TicketFlow.Service.JwtService;
 using Identity = TicketFlow.Service.UserCase.V1.Identity;
@@ -27,6 +28,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddAutoMapper(typeof(ServiceProfile).Assembly);
 builder.Services.AddValidatorsFromAssembly(typeof(Identity.Validator.LoginRequestValidator).Assembly);
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IDapperContext, DapperContext>();
 builder.Services.AddScoped<Profile.IService, Profile.Service>();
 builder.Services.AddScoped<Identity.IService, Identity.Service>();
 var app = builder.Build();

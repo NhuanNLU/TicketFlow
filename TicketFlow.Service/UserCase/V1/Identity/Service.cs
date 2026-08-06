@@ -81,7 +81,7 @@ public class Service: IService
         {
             AccessToken =  accessToken,
             RefreshToken = refreshToken,
-            RefreshTokenExpiryTime =  DateTime.Now.AddMinutes(5)
+            RefreshTokenExpiryTime =  DateTime.Now.AddMinutes(30)
         };
         await _cacheService.SetAsync(user.Email, response, cancellationToken);
         return response;;
